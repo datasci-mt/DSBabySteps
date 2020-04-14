@@ -4,7 +4,7 @@ library(tidyverse)
 # Carregando dados de iris
 irisF <- iris %>% as_tibble()
 
-# Rápida exploração dos dados
+# RÃ¡pida exploraÃ§Ã£o dos dados
 Hmisc::describe(irisF)
 
 irisF %>% 
@@ -90,7 +90,7 @@ botanista$custos %>%
   ggplot(aes(x = iter, y = custo, color = dados)) + 
   geom_line()
 
-# Verificando separação
+# Verificando separaÃ§Ã£o
 irisF <- irisF %>% mutate(prob = perceptron(x, botanista$pesos, botanista$vies),
                           pred = ifelse(prob > 0.5, 1, 0))
 
